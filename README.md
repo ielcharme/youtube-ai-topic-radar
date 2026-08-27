@@ -6,8 +6,7 @@ A Codex skill for tracking recent AI topics across a curated multilingual set of
 
 ## Coverage
 
-- 35 curated creators
-- English, French, German, and Spanish
+- 50 curated creators: 20 English, 10 French, 10 German, and 10 Spanish
 - Biweekly refresh workflow
 - Source links, publication dates, Chinese title translations, topic clustering, and opportunity scoring
 - Original video ideas without copying scripts, titles, thumbnails, or distinctive phrasing
