@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube AI Topic Radar"
+  short_description: "Track AI creators across English, French, German, and Spanish"
+  default_prompt: "Use $youtube-ai-topic-radar to refresh the latest AI creator topics and turn them into original video references."
