@@ -1,52 +1,173 @@
 # YouTube AI Topic Radar
 
-A Codex skill for tracking recent AI topics across a curated multilingual set of YouTube creators and turning the findings into source-backed, original video-planning references.
+一个面向 AI 视频创作者的多语言 YouTube 话题雷达 Codex Skill。
 
-一个用于追踪 YouTube AI 博主近期话题、发现跨语言趋势，并生成原创视频选题参考的 Codex Skill。
+它持续观察 50 位英语、法语、德语和西班牙语 AI 创作者，把近期视频整理为可追溯的趋势信号、跨语言差异和原创视频选题参考。
 
-## Coverage
+> This Codex skill monitors multilingual YouTube AI creators and turns recent, source-linked activity into original video-planning references.
 
-- 50 curated creators: 20 English, 10 French, 10 German, and 10 Spanish
-- Biweekly refresh workflow
-- Source links, publication dates, Chinese title translations, topic clustering, and opportunity scoring
-- Original video ideas without copying scripts, titles, thumbnails, or distinctive phrasing
+## 它解决什么问题
 
-The current roster is maintained in [`references/creator-roster.md`](references/creator-roster.md).
+AI 资讯更新很快，但逐个查看几十个频道会花费大量时间，而且容易只看到英语内容。这个 Skill 将分散的视频更新转化为一份结构化研究结果：
 
-## Install
+- 哪些 AI 话题最近被多个创作者同时关注；
+- 英语、法语、德语和西班牙语创作者的关注角度有何不同；
+- 哪些话题只是单一频道的早期信号，哪些已经形成跨频道趋势；
+- 哪些海外话题尚缺中文、法国、德国、西班牙或欧洲市场视角；
+- 如何在不复制他人标题、脚本或缩略图的情况下，形成自己的视频方案。
 
-Copy or clone this repository into your Codex skills directory:
+## 具体可以应用什么
+
+| 应用场景 | 可以完成的工作 | 主要输出 |
+|---|---|---|
+| 双周 AI 趋势追踪 | 扫描监测窗口内 50 个频道的新视频，合并重复链接并聚类相近主题 | 中文趋势摘要、热门话题排行、来源链接 |
+| 原创视频选题 | 根据近期信号提出适合制作的内容方向，并评估时效性、受众价值和制作可行性 | 5–10 个选题、目标受众、原创角度、选题评分 |
+| 标题与开场策划 | 把趋势转化为自己的标题方向、开场钩子、视频结构和演示方式 | 中文工作标题、Hook、内容格式、需要准备的证据或 Demo |
+| 跨语言内容研究 | 比较英语、法语、德语和西班牙语创作者对同一话题的不同表达 | 跨语言差异、区域关注点、本地化机会 |
+| AI 产品发布跟进 | 汇总创作者对新模型、新工具或新功能的测试与反应 | 观点分布、常见用例、待官方来源核实的关键声明 |
+| 竞品与频道观察 | 查看每位创作者近期活跃度、主要主题和代表性视频 | 创作者活动表、频道状态、内容定位参考 |
+| 内容栏目规划 | 从连续多期报告中识别适合教程、测评、新闻、访谈或案例拆解的稳定栏目 | 栏目方向、内容形式、后续观察清单 |
+| 结构化研究归档 | 将视频、主题标签、语言和选题结果保存为机器可读数据 | Markdown 报告和 JSON 数据集 |
+
+适合 AI 工具测评博主、效率类创作者、AI 教育者、营销与电商团队、多语言内容团队，以及需要长期观察海外 AI 内容趋势的人使用。
+
+## 监测范围
+
+当前名单包含 50 个公开 YouTube 频道：
+
+| 主要发布语言 | 数量 |
+|---|---:|
+| English | 20 |
+| Français | 10 |
+| Deutsch | 10 |
+| Español | 10 |
+
+完整频道与主题标签见 [`references/creator-roster.md`](references/creator-roster.md)。名单并非单纯按订阅量排名，而是综合考虑 AI 相关度、近期活跃度、内容质量、主题差异和创作参考价值。
+
+## 三种使用模式
+
+### 1. Refresh：刷新近期话题
+
+扫描指定时间段内的频道更新，收集公开可验证的视频资料，形成最新趋势报告和数据集。
+
+每条视频记录可包含：
+
+- 创作者和主要语言；
+- 原始标题和中文译名；
+- 发布日期和视频链接；
+- 可见播放量（能够取得时）；
+- 长视频、Short、直播或播客等格式；
+- AI 工具、智能体、编程、效率、营销、创业、创意生成等多标签分类。
+
+### 2. Video reference：生成视频参考方案
+
+使用最新报告或指定时间段的研究结果，生成原创的视频策划，包括：
+
+- 目标观众；
+- 与已有视频不同的切入角度；
+- 开场 Hook；
+- 中文工作标题；
+- 建议的视频形式和内容结构；
+- 需要实际测试、演示或查证的部分；
+- 灵感来源和需要避免的模仿风险。
+
+### 3. Roster maintenance：维护监测名单
+
+检查频道是否改名、停更、重复或改变方向，并提出替换或新增建议。固定 50 位名单默认保持 `20/10/10/10` 的语言结构，不会因为一次访问失败而自动删除频道。
+
+## 如何判断值得做的话题
+
+每个候选话题可按 25 分制评估：
+
+- 时效性；
+- 跨频道信号强度；
+- 对目标受众的实际价值；
+- 视频制作可行性；
+- 中文、欧洲或特定语言市场的本地化空缺。
+
+单一频道提出的新观点仍可进入观察清单，但会标记为早期信号，而不是跨频道趋势。完整规则见 [`references/report-format.md`](references/report-format.md)。
+
+## 安装
+
+将仓库克隆到 Codex Skills 目录：
 
 ```bash
 git clone https://github.com/ielcharme/youtube-ai-topic-radar.git ~/.codex/skills/youtube-ai-topic-radar
 ```
 
-Restart Codex after installation if the skill is not detected immediately.
+如果 Codex 没有立即识别该 Skill，请重启 Codex。
 
-## Example requests
+## 使用示例
+
+安装后，可以直接在 Codex 中提出这些请求：
 
 ```text
-刷新过去两周这些 YouTube AI 博主发布的话题，并生成中文趋势报告。
+使用 $youtube-ai-topic-radar 刷新过去 16 天的 50 个频道，并生成中文趋势报告。
 
-比较英语、法语、德语和西班牙语 AI 博主最近都在讨论什么。
+比较英语、法语、德语和西班牙语 AI 博主最近对 AI Agent 的关注差异。
 
-根据最新报告，为我提供 10 个原创视频选题、标题方向和开场钩子。
+根据最新报告，为 AI 工具测评频道提出 10 个原创选题，包含标题、Hook、视频形式和需要演示的内容。
+
+找出最近两周被至少三个不同频道讨论的话题，并按创作机会评分。
+
+哪些海外 AI 话题目前缺少中文或欧洲市场视角？给出可以本地化制作的方案。
+
+检查监测名单中是否有改名、停更或内容方向明显变化的频道，只提出建议，不要直接删除。
 ```
 
-## Output
+也可以限定受众和内容形式：
 
-When a refresh is saved, the skill uses:
+```text
+只保留适合非技术职场用户的选题。
 
-- `reports/YYYY-MM-DD.md` for dated snapshots
-- `reports/latest.md` for the latest readable report
-- `data/latest.json` for structured data
+只分析 AI 视频生成、AI 营销和电商自动化相关内容。
 
-Generated reports and datasets are ignored by Git by default.
+把结果改成适合 8 分钟 YouTube 视频和 60 秒 Shorts 的两套方案。
+```
 
-## Safety boundary
+## 定期刷新
 
-This skill uses public information for research. It does not automatically publish content, interact with creators, bypass platform controls, or treat creator videos as primary confirmation for consequential product, pricing, policy, or technical claims.
+Skill 本身定义了双周采集流程，但不会自行在后台运行。可以在 Codex 中为它创建每两周一次的自动任务。首次运行或没有可靠的上次刷新状态时，默认查看最近 16 天，以保留两天重叠，减少边界遗漏。
+
+自动任务的请求示例：
+
+```text
+每两周使用 $youtube-ai-topic-radar 刷新全部 50 个频道，保存报告，并向我汇报最值得制作的 5 个选题和无法访问的频道。
+```
+
+## 输出文件
+
+保存刷新结果时，默认在 Skill 目录中生成：
+
+```text
+reports/YYYY-MM-DD.md  # 带日期的不可变快照
+reports/latest.md      # 最新中文报告
+data/latest.json       # 最新结构化数据
+```
+
+Markdown 报告适合人工阅读和视频策划；JSON 数据可继续用于表格、数据库、仪表盘或其他内容工作流。生成的报告和数据默认不会提交到 Git 仓库。
+
+## 证据与创作边界
+
+- 每个收录视频都应保留来源链接和发布日期。
+- 频道无法访问时标记为 `unavailable`，不能因此判断它没有更新。
+- 播放量、订阅量、赞助状态和发布频率属于动态数据，必须附观察时间，缺失时使用 `null`，不猜测。
+- 创作者视频只能作为趋势信号，不能替代产品、价格、政策或技术事实的一手来源。
+- 结果必须进行原创整合，不复制脚本、独特措辞、标题或缩略图构图。
+- Skill 不会自动发布视频、评论、订阅频道、联系创作者或操作外部账号。
+- 只使用公开信息，不绕过登录、付费墙或平台限制，也不保存完整视频脚本或字幕副本。
+
+## Repository structure
+
+```text
+youtube-ai-topic-radar/
+├── SKILL.md
+├── agents/openai.yaml
+├── references/creator-roster.md
+├── references/report-format.md
+└── README.md
+```
 
 ## License
 
-No license has been granted yet. The repository is public for inspection and personal use subject to applicable copyright law.
+No open-source license has been selected yet. Public repository visibility does not by itself grant reuse rights beyond applicable law.
