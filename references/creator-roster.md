@@ -38,7 +38,7 @@ Channel handles were spot-checked on 2026-08-27. Treat later redirects, renames,
 | Machine Learnia | https://www.youtube.com/@MachineLearnia | machine learning, deep learning, Python, data science |
 | Defend Intelligence | https://www.youtube.com/@DefendIntelligence | AI explainers, experiments, privacy, society |
 | Monsieur IA | https://www.youtube.com/@monsieur_ia | AI news, tools, practical tutorials |
-| ExplorIA Business | https://www.youtube.com/@ExplorIABusiness | AI agents, n8n, business automation |
+| ExplorIA Business | https://www.youtube.com/channel/UCxx03UqvjTy9w8iomLwTSuQ | AI agents, n8n, business automation |
 | Mayeul Rougevin | https://www.youtube.com/@mayeul_rougevin | AI news, practical use cases, business, education |
 | Basti Ui | https://www.youtube.com/@BastiUi | AI design, no-code, product creation, creative workflows |
 | Underscore_ | https://www.youtube.com/@Underscore_ | AI and tech interviews, news, society, cybersecurity |
@@ -76,8 +76,10 @@ Channel handles were spot-checked on 2026-08-27. Treat later redirects, renames,
 
 ## Maintenance rules
 
+- `ExplorIA Business` rebranded as `Henri · ExplorIA`; its current channel ID URL was resolved from the creator's public site and a public creator directory on 2026-09-21.
+
 - Resolve redirects or renamed handles before declaring a channel unavailable.
 - Keep the existing row and add a status note when a channel is dormant, inaccessible, or has changed focus.
-- Propose additions when a creator shows repeated relevance over at least two refreshes or fills a meaningful language/topic gap.
+- Propose replacements when repeated refreshes show a creator rarely covers internationally relevant frontier AI, or when another creator would fill a persistent gap in major model, product, research, or multimodal coverage. Verify the proposed channel and preserve the language allocation.
 - Do not rank solely by subscribers. Activity, topical fit, evidence quality, and useful creative patterns also matter.
 - Preserve the 20/10/10/10 language allocation unless the user explicitly changes it. Replace rather than append when maintaining a fixed 50-channel roster.
