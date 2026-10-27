@@ -1,20 +1,22 @@
 # Creator roster
 
-This roster contains 50 public YouTube channels, grouped by primary publishing language: 20 English, 10 French, 10 German, and 10 Spanish. A creator can have several coexisting content labels.
+This roster contains 53 public YouTube channels, grouped by primary publishing language: 23 English, 10 French, 10 German, and 10 Spanish. A creator can have several coexisting content labels.
 
 Channel handles were spot-checked on 2026-08-27. Treat later redirects, renames, or access failures as time-sensitive.
 
-## English — 20
+## English — 23
 
 | Creator | Channel | Working labels |
 |---|---|---|
 | Lex Fridman | https://www.youtube.com/@lexfridman | interviews, AI research, technology, society |
+| Dwarkesh Patel | https://www.youtube.com/@DwarkeshPatel | frontier AI research interviews, models, compute, safety; AI episodes only |
 | Fireship | https://www.youtube.com/@Fireship | AI coding, developer tools, technology news |
 | Jeff Su | https://www.youtube.com/@JeffSu | AI productivity, work, career, tools |
 | Two Minute Papers | https://www.youtube.com/@TwoMinutePapers | AI papers, generative AI, computer graphics |
 | Andrej Karpathy | https://www.youtube.com/@AndrejKarpathy | LLMs, neural networks, AI engineering |
 | Tina Huang | https://www.youtube.com/@TinaHuang1 | AI learning, career, productivity, coding |
 | Matt Wolfe | https://www.youtube.com/@mreflow | AI tools, news, creative AI |
+| TheAIGRID | https://www.youtube.com/@TheAiGrid | AI news, model launches, robotics, multimodal tools |
 | Nate Herk | https://www.youtube.com/@nateherk | n8n, agents, automation, Claude Code |
 | Liam Ottley | https://www.youtube.com/@LiamOttley | AI agents, agencies, entrepreneurship |
 | Matthew Berman | https://www.youtube.com/@matthew_berman | model news, open models, product tests |
@@ -25,6 +27,7 @@ Channel handles were spot-checked on 2026-08-27. Treat later redirects, renames,
 | Wes Roth | https://www.youtube.com/@WesRoth | AI news, model launches, commentary |
 | Dave Ebbelaar | https://www.youtube.com/@daveebbelaar | AI engineering, agents, production systems |
 | AI Jason | https://www.youtube.com/@AIJasonZ | agentic coding, AI products, frameworks |
+| Marketing Against the Grain | https://www.youtube.com/@MATGpod | AI marketing, growth experiments, agents, creator workflows; AI episodes only |
 | Cole Medin | https://www.youtube.com/@ColeMedin | agents, RAG, local models, open source |
 | AI with Remy | https://www.youtube.com/@aiwithremy | Claude, founder workflows, AI operating systems |
 | All About AI | https://www.youtube.com/@AllAboutAI | AI agents, model tests, automation, tutorials |
@@ -77,9 +80,10 @@ Channel handles were spot-checked on 2026-08-27. Treat later redirects, renames,
 ## Maintenance rules
 
 - `ExplorIA Business` rebranded as `Henri · ExplorIA`; its current channel ID URL was resolved from the creator's public site and a public creator directory on 2026-09-21.
+- `Dwarkesh Patel`, `TheAIGRID`, and `Marketing Against the Grain` were added at the user's request on 2026-10-27. The latter and Dwarkesh Patel cover other subjects too; count only qualifying AI uploads.
 
 - Resolve redirects or renamed handles before declaring a channel unavailable.
 - Keep the existing row and add a status note when a channel is dormant, inaccessible, or has changed focus.
 - Propose replacements when repeated refreshes show a creator rarely covers internationally relevant frontier AI, or when another creator would fill a persistent gap in major model, product, research, or multimodal coverage. Verify the proposed channel and preserve the language allocation.
 - Do not rank solely by subscribers. Activity, topical fit, evidence quality, and useful creative patterns also matter.
-- Preserve the 20/10/10/10 language allocation unless the user explicitly changes it. Replace rather than append when maintaining a fixed 50-channel roster.
+- Preserve the current 23/10/10/10 language allocation unless the user explicitly changes it. Do not remove existing creators silently when maintaining the roster.

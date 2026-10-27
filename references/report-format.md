@@ -59,7 +59,7 @@ Save `data/latest.json` with this top-level shape:
   "observed_at": "YYYY-MM-DDTHH:MM:SS+TZ",
   "window_start": "YYYY-MM-DD",
   "window_end": "YYYY-MM-DD",
-  "roster_size": 50,
+  "roster_size": 53,
   "channels_checked": 0,
   "channels_unavailable": [],
   "videos": [],
