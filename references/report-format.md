@@ -40,15 +40,16 @@ Do not inflate a score because a creator is large. A single-source topic can sti
 
 Write the report in Chinese with this order:
 
-1. **Refresh metadata:** observation date, time window, roster size, channels checked, channels unavailable, videos collected.
+1. **Refresh metadata:** observation date, time window, roster size, channels checked, channels unavailable, videos collected, supplementary newsletter sources checked and unavailable.
 2. **Executive summary:** no more than eight concise findings.
 3. **Top topic opportunities:** ranked table with score, topic, evidence count, independent creators, languages, why it matters globally, and source links.
 4. **Frontier product coverage:** compact table of products actually discussed by monitored creators, plus important watched products with no qualifying video clearly marked `本期名单未覆盖`. Include official links where product facts are mentioned.
-5. **Cross-language comparison:** what English, French, German, and Spanish creators emphasize differently about global AI developments.
-6. **Creator activity:** one compact row per creator with upload count, major topics, strongest reference video, and status.
-7. **Original video briefs:** five to ten ideas. For each include audience, original angle, hook, working Chinese title, format, proof/demo needed, source inspiration, and copying risks to avoid. Anchor each brief to monitored videos; official-only watch items stay outside the brief list until the user explicitly requests them.
-8. **Watch next:** emerging one-source signals, official-only watch items, and claims that need primary-source verification.
-9. **Coverage gaps:** inaccessible channels, missing metadata, and major global AI topics the roster did not cover.
+5. **Supplementary newsletter findings:** AI-relevant items from the public sources in `newsletter-watchlist.md`, with source type, date, title/translation, link, and relevance. Keep this section separate from YouTube trend counts; label vendor claims as first-party.
+6. **Cross-language comparison:** what English, French, German, and Spanish creators emphasize differently about global AI developments.
+7. **Creator activity:** one compact row per creator with upload count, major topics, strongest reference video, and status.
+8. **Original video briefs:** five to ten ideas. For each include audience, original angle, hook, working Chinese title, format, proof/demo needed, source inspiration, and copying risks to avoid. Anchor each brief to monitored videos; official-only watch items stay outside the brief list until the user explicitly requests them.
+9. **Watch next:** emerging one-source signals, official-only watch items, and claims that need primary-source verification.
+10. **Coverage gaps:** inaccessible channels or newsletter archives, missing metadata, and major global AI topics the roster did not cover.
 
 ## Structured dataset
 
@@ -63,6 +64,9 @@ Save `data/latest.json` with this top-level shape:
   "channels_checked": 0,
   "channels_unavailable": [],
   "videos": [],
+  "newsletter_sources_checked": 0,
+  "newsletter_sources_unavailable": [],
+  "newsletter_items": [],
   "topic_clusters": [],
   "frontier_product_coverage": [],
   "video_briefs": []
@@ -91,3 +95,5 @@ Each video should include:
 ```
 
 Use `null`, not guesses, for unavailable fields. Keep only public metadata and short analytical notes; do not store transcripts or copied scripts.
+
+Each `newsletter_items` entry should contain `source`, `source_type` (`university_news|vendor_changelog|vendor_editorial`), `title_original`, `title_zh`, `published_at`, `url`, `labels`, `narrow_tags`, and a short `evidence_note`. Use the original public article or release-note URL, never an email tracking link. These entries do not count toward `videos`, `frontier_product_coverage` video totals, or independent-creator counts. Keep private inbox data out of the dataset.

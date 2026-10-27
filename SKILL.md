@@ -1,6 +1,6 @@
 ---
 name: youtube-ai-topic-radar
-description: Monitor multilingual YouTube creators for globally relevant frontier AI developments and turn their recent topics into source-backed, original video references. Use for biweekly scans, international AI product and research trends, English/French/German/Spanish comparisons, roster maintenance, or video ideation. Do not use to copy or automatically publish content.
+description: Monitor multilingual YouTube creators and selected public research/product newsletters for globally relevant frontier AI developments, then turn recent topics into source-backed, original video references. Use for biweekly scans, international AI product and research trends, English/French/German/Spanish comparisons, roster maintenance, or video ideation. Do not use to copy or automatically publish content.
 ---
 
 # YouTube AI Topic Radar
@@ -10,6 +10,7 @@ Track what selected AI creators are publishing about internationally relevant AI
 ## Required resources
 
 - Always read [references/creator-roster.md](references/creator-roster.md) before scanning channels or changing the watchlist.
+- Read [references/newsletter-watchlist.md](references/newsletter-watchlist.md) before a refresh or when changing supplementary sources.
 - Read [references/report-format.md](references/report-format.md) when producing a refresh report, structured dataset, or video brief.
 
 ## Modes
@@ -29,8 +30,9 @@ Choose the narrowest mode that satisfies the request:
 5. Deduplicate by canonical video URL. Cluster related videos by underlying topic while preserving different creator angles and languages.
 6. Use multi-label classification. Cover frontier model releases and evaluations, multimodal creation, agents and coding, open models, AI research, robotics, safety and other internationally discussed developments. Track the actual products in the uploads, including Meta AI/Llama, Gemini, Grok, 即梦/Jimeng, and other relevant tools when evidence supports them; this is an illustrative watchlist, not a fixed quota or a reason to invent coverage. Do not exclude a product because of its company or country of origin; verify its actual regional availability when that matters to a proposed demo.
 7. Rank topic opportunities using the scoring method in the report reference. Give priority to globally significant, recent, independently covered developments and original demonstrations. Count distinct creators and languages rather than treating repeated Shorts from one channel as broad momentum. If a major product or development has no qualifying video in this roster/window, mark it as a coverage gap and, where useful, cite an official source for context; do not present it as a creator trend.
-8. Produce the Chinese report and machine-readable dataset described in the report reference. Keep original-language titles beside translations.
-9. When file writes are available, save an immutable dated report and replace the latest report and dataset. If a write fails, still return the report and identify the exact unavailable boundary.
+8. Scan the public archives in the newsletter watchlist over the same window. Include only dated, substantive AI items; record them separately from creator videos. A research article or vendor release note is context, not independent creator momentum. Mark inaccessible archives `unavailable`.
+9. Produce the Chinese report and machine-readable dataset described in the report reference. Keep original-language titles beside translations.
+10. When file writes are available, save an immutable dated report and replace the latest report and dataset. If a write fails, still return the report and identify the exact unavailable boundary.
 
 ## Evidence rules
 
@@ -39,6 +41,7 @@ Choose the narrowest mode that satisfies the request:
 - Separate creator claims, observed facts, and analysis. Note sponsorship or affiliate disclosure when visible.
 - Use other creators as signals and references, not as factual confirmation of AI product claims. Verify consequential product, policy, pricing, or technical claims against primary sources before recommending them as facts.
 - Make clear whether a finding comes from monitored creator videos, an official announcement, or your own synthesis. Never infer worldwide availability or comparative superiority from a launch headline.
+- Use public newsletter archives only. Never put private email content, message IDs, recipient details, or tracking links in reports or this repository.
 
 ## Creative boundary
 
